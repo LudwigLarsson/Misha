@@ -1,0 +1,575 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+@font-face {
+    font-family: 'SF Pro Medium';
+    src: url('../fonts/SFPro/SFProDisplay-Medium.eot');
+    src: local('../fonts/SFPro/SF Pro Display Medium'), local('../fonts/SFPro/SFProDisplay-Medium'),
+        url('../fonts/SFPro/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFPro/SFProDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/SFPro/SFProDisplay-Medium.woff') format('woff'),
+        url('../fonts/SFPro/SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SF Pro Semibold';
+    src: url('../fonts/SFPro/SFProDisplay-Semibold.eot');
+    src: local('../fonts/SFPro/SF Pro Display Semibold'), local('../fonts/SFPro/SFProDisplay-Semibold'),
+        url('../fonts/SFPro/SFProDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFPro/SFProDisplay-Semibold.woff2') format('woff2'),
+        url('../fonts/SFPro/SFProDisplay-Semibold.woff') format('woff'),
+        url('../fonts/SFPro/SFProDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+	background-color: #f2f2f7;
+}
+
+.main {
+	.main__body {
+		margin: 0 53px 0 53px;
+		padding-bottom: 20px;
+
+		.main__header {
+			padding: 20px 0 12px 0;
+			display: flex;
+			position: sticky;
+			left: 0;
+			top: 0;
+			z-index: 1000;
+			background-color: #f2f2f7;
+			align-items: center;
+
+			.main__left_flex {
+				display: flex;
+				align-items: center;
+
+				.main__icon {
+					height: 32px;
+					width: 32px;
+					margin: 0 16px 0 0;
+				}
+
+				.main__misha {
+					color: #464646;
+					font-family: SF Pro Semibold;
+					font-size: 24px;
+				}
+				.main__misha.active {
+					color: rgb(0, 122, 255);
+					font-weight: bold;
+				}
+			}
+			.main__right_flex {
+				margin-left: auto;
+		  		margin-right: 0;
+
+				.main__ul_right_flex li {
+					display: inline;
+					font-family: SF Pro Semibold;
+					font-size: 14px;
+					margin: 0 0 0 24px;
+					color: rgb(149, 149, 149);
+					letter-spacing: 1px;
+				}
+				.main__a_right_flex {
+					color: rgb(149, 149, 149);
+				}
+				.main__a_right_flex.active {
+					color: rgb(0, 122, 255);
+					font-weight: bold;
+				}
+			}
+		}
+		.main__block {
+			margin: 16px 0 0 0;
+			background: url(../img/main_back.png) 50%/cover no-repeat;
+			/*background-image: url(../img/main_back.png);
+			background-size: auto 100%;
+			background-repeat: no-repeat;*/
+			border-radius: 20px;
+			color: rgb(255, 255, 255);
+			font-size: 80px;
+			box-sizing: border-box;
+			height: 85vh;
+			position: relative;
+			scroll-margin-top: 100px;
+
+			.main__title {
+				font-family: SF Pro Semibold;
+				margin-bottom: 160px;
+				letter-spacing: 1px;
+				bottom: 0;
+				margin-left: 56px;
+				position: absolute;
+			}
+
+			.main__subtitle {
+				font-size: 32px;
+				font-family: SF Pro Semibold;
+				letter-spacing: 1px;
+				line-height: 36px;
+				margin-bottom: 80px;
+				bottom: 0;
+				margin-left: 56px;
+				position: absolute;
+			}
+
+		
+		}
+
+		.why__block {
+			margin: 80px 0 0 0;
+			background-color: rgb(255, 255, 255);
+			border-radius: 20px;
+			box-sizing: border-box;
+			max-height: 560px;
+			padding: 0 124px 20px 124px;
+			scroll-margin-top: 80px;
+
+			.why__title {
+				padding: 20px 0 0 0;
+				color: rgb(0, 122, 255);
+				font-size: 32px;
+				font-family: SF Pro Semibold;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+/*			.why__flex1 {
+				display: flex;
+				align-items: center;
+				margin: 32px 0 0 0;*/
+
+				.why__block_1 {
+					padding: 20px 16px 20px 16px;
+					background-color: rgb(255, 41, 77);
+					border-radius: 20px;
+					color: rgb(255, 255, 255);
+					font-size: 22px;
+					font-family: SF Pro Semibold;
+					box-sizing: border-box;
+					max-height: 288px;
+
+					.why__block_1_title {
+						letter-spacing: 1px;
+					}
+
+					.why__block_1_2 {
+
+						margin: 24px 0 0 0;
+						padding: 24px;
+						background-color: rgb(255, 255, 255);
+						border-radius: 20px;
+						color: rgb(71, 71, 71);
+						font-size: 18px;
+						font-family: SF Pro Semibold;
+						box-sizing: border-box;
+						height: 120px;
+						display: flex;
+						line-height: 23px;
+  						align-items: center;
+					}
+				}
+
+				.why__block_2 {
+					padding: 20px 16px 20px 16px;
+					background-color: rgb(149, 149, 149);
+					border-radius: 20px;
+					color: rgb(255, 255, 255);
+					font-size: 22px;
+					box-sizing: border-box;
+					max-height: 288px;
+					font-family: SF Pro Semibold;
+
+			  		.why__block_2_title {
+						letter-spacing: 1px;
+					}
+
+					.why__block_2_2 {
+						margin: 24px 0 0px 0;
+						padding: 24px;
+						background-color: rgb(255, 255, 255);
+						border-radius: 20px;
+						color: rgb(71, 71, 71);
+						font-size: 18px;
+						box-sizing: border-box;
+						height: 120px;
+						font-family: SF Pro Semibold;
+						display: flex;
+						line-height: 23px;
+  						align-items: center;
+					}
+				}
+/*			}*/
+
+/*			.why__flex2 {
+				display: flex;
+				align-items: space-between;
+				margin: 20px 0 16px 0;
+*/
+				.why__block_3 {
+					padding: 20px 16px 20px 16px;
+					background-color: rgb(209, 209, 209);
+					border-radius: 20px;
+					color: rgb(255, 255, 255);
+					font-size: 22px;
+					box-sizing: border-box;
+					font-family: SF Pro Semibold;
+					max-height: 288px;
+
+					.why__block_3_title {
+						letter-spacing: 1px;
+					}
+
+					.why__block_3_2 {
+						margin: 24px 0 0 0;
+						padding: 24px;
+						background-color: rgb(255, 255, 255);
+						border-radius: 20px;
+						color: rgb(71, 71, 71);
+						font-size: 18px;
+						box-sizing: border-box;
+						height: 120px;
+						font-family: SF Pro Semibold;
+						display: flex;
+						line-height: 23px;
+  						align-items: center;
+					}
+				}
+
+				.why__block_4 {
+					padding: 20px 16px 20px 16px;
+					background-color: rgb(0, 122, 255);
+					border-radius: 20px;
+					color: rgb(255, 255, 255);
+					font-size: 22px;
+					box-sizing: border-box;
+					max-height: 288px;
+					font-family: SF Pro Semibold;
+
+			  		.why__block_4_title {
+						letter-spacing: 1px;
+					}
+
+					.why__block_4_2 {
+						margin: 24px 0 0 0;
+						padding: 24px;
+						background-color: rgb(255, 255, 255);
+						border-radius: 20px;
+						color: rgb(71, 71, 71);
+						font-size: 18px;
+						box-sizing: border-box;
+						height: 120px;
+						font-family: SF Pro Semibold;
+						display: flex;
+						line-height: 23px;
+  						align-items: center;
+					}
+				}
+/*			}*/
+
+		}
+		.opportunities {
+			scroll-margin-top: 100px;
+
+			.opportunities__main_title {
+				font-size: 32px;
+				color: rgb(0, 122, 255);
+				font-family: SF Pro Semibold;
+				margin: 32px 0 24px 0;
+			}
+
+			.opportunities__main_block {
+				background-color: rgb(0, 122, 255);
+				border-radius: 20px;
+				height: 400px;
+				padding: 18px;
+				display: flex;
+				justify-content: space-between;
+
+				.opportunities__block_1 {
+					background-color: rgb(255, 255, 255);
+					border-radius: 20px;
+					width: 100%;
+					display: flex;
+					margin-right: 18px;
+
+					.opportunities__title_1 {
+						position: absolute;
+						font-size: 18px;
+						line-height: 22px;
+						font-family: SF Pro Semibold;
+						color: rgb(71, 71, 71);
+						margin: 18px 0 0 28px;
+					}
+
+					.opportunities__img_1 {
+						margin-top: 24px;
+						margin-left: auto;
+    					margin-right: auto;
+					}
+				}
+				.opportunities__block_2 {
+					background-color: rgb(255, 255, 255);
+					border-radius: 20px;
+					width: 100%;
+					display: flex;
+					margin-right: 18px;
+
+					.opportunities__title_2 {
+						position: absolute;
+						font-size: 18px;
+						font-family: SF Pro Semibold;
+						color: rgb(71, 71, 71);
+						line-height: 22px;
+						margin: 18px 0 0 28px;
+					}
+
+					.opportunities__img_2 {
+						margin-top: 24px;
+						margin-left: auto;
+    					margin-right: auto;
+					}
+				}
+				.opportunities__block_3 {
+					background-color: rgb(255, 255, 255);
+					border-radius: 20px;
+					display: flex;
+					width: 100%;
+
+					.opportunities__title_3 {
+						position: absolute;
+						font-size: 18px;
+						color: rgb(71, 71, 71);
+						line-height: 22px;
+						font-family: SF Pro Semibold;
+						margin: 18px 0 100px 28px;
+					}
+					.opportunities__img_3 {
+						margin-top: 24px;
+						margin-left: auto;
+    					margin-right: auto;
+					}
+				}
+			}
+		}
+		.mobile {
+			border-radius: 20px;
+			display: flex;
+			width: 100%;
+			box-sizing: border-box;
+			height: 500px;
+			justify-content: center;
+			margin-top: 48px;
+			border: 3px solid rgb(0, 122, 255);
+			scroll-margin-top: 100px;
+
+			.mobile__title {
+				position: absolute;
+				font-size: 32px;
+				color: rgb(0, 122, 255);
+				line-height: 22px;
+				text-align: center;
+				font-family: SF Pro Semibold;
+				margin-top: 18px;
+			}
+			.mobile__subtitle {
+				position: absolute;
+				font-size: 16px;
+				color: rgb(0, 122, 255);
+				line-height: 22px;
+				text-align: center;
+				font-family: SF Pro Semibold;
+				margin-top: 48px;
+			}
+			.mobile__img {
+				margin-top: 12px;
+				margin-left: auto;
+    			margin-right: auto;
+			}
+		}
+		.login {
+			border-radius: 20px;
+			display: flex;
+			width: 100%;
+			box-sizing: border-box;
+			height: 85vh;
+			background-repeat: no-repeat;
+			margin-top: 48px;
+			text-align: center;
+			background: url(../img/login_back.svg) 50%/cover no-repeat;;
+			justify-content: center;
+			margin-bottom: 24px;
+			align-items: center;
+			scroll-margin-top: 100px;
+
+			.login__block {
+				
+				border-radius: 20px;
+				height: 320px;
+				width: 512px;
+				padding: 40px 104px 0 104px;
+				box-sizing: border-box;
+				background-color: white;
+
+				.login__options {
+					display: flex;
+					justify-content: center;
+
+					.block__registration {
+						font-size: 22px;
+						font-family: SF Pro Medium;
+						color: #222222;
+						margin-left: 12px;
+						height: 34px;
+						width: 100%;
+						border-bottom: 2px solid rgb(0, 122, 255);
+					}
+
+					.block__login {
+						font-size: 22px;
+						color: #7F7F85;
+						font-family: SF Pro Medium;
+						height: 34px;
+						width: 100%;
+						
+					}
+				}
+				.login__telephone {
+					background-color: #E3E3E9;
+					border-radius: 10px;
+					width: 100%;
+					margin-bottom: 6px;
+					height: 46px;
+					margin-top: 40px;
+					padding-left: 12px;
+					font-family: SF Pro Medium;
+				}
+				.login__telephone::placeholder {
+					font-family: SF Pro Medium;
+					color: #7F7F85;
+				}
+				.login__password {
+					border-radius: 10px;
+					background-color: #E3E3E9;
+					width: 100%;
+					height: 46px;
+					padding-left: 12px;
+					margin-bottom: 18px;
+					font-family: SF Pro Medium;
+				}
+				.login__password::placeholder {
+					font-family: SF Pro Medium;
+					color: #7F7F85;
+				}
+				.login__next {
+					border-radius: 10px;
+					background-color: #E3E3E9;
+					width: 100%;
+					height: 46px;
+					background-color: rgb(0, 122, 255);
+					font-family: SF Pro Semibold;
+					color: white;
+				}
+			}
+		}
+		.bottom_bar {
+			display: flex;
+			align-items: center;
+			height: 32px;
+			justify-content: space-between;
+			scroll-margin-top: 100px;
+
+			.bottom_bar__flex {
+				display: flex;
+				align-items: center;
+
+				.bottom_bar__icon {
+					width: 24px;
+					height: 24px;
+					margin-right: 12px;
+				}
+
+				.bottom_bar__name {
+					font-size: 16px;
+					color: #474747;
+					font-family: SF Pro Semibold;
+
+				}
+			}
+			.bottom_bar__info {
+				font-size: 14px;
+				color: #959595;
+				font-family: SF Pro Medium;
+			}
+		}
+	}
+}
+
+.foo__card {
+
+}
+
+.foo__first {
+	grid-area: first;
+}
+
+.foo__second {
+	grid-area: second;
+}
+
+.foo__third {
+	grid-area: third;
+}
+
+.foo__four {
+	grid-area: four;
+}
+
+.foo__blocks {
+	display: grid;	
+	grid-gap: 30px;
+	grid-template-areas: "first second"
+						"third four";
+}
