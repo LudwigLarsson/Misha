@@ -1,0 +1,95 @@
+@import url("service.css");
+
+body {
+	background-color: #f2f2f7;
+}
+
+.main {
+	display: flex;
+    height: 100vh;
+
+	.left_block {
+		background-color: white;
+		height: 100%;
+		width: 40%;
+		padding: 0 24px;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+    	position: relative;
+	}
+	.left_block__title {
+		font-family: SF Pro Semibold;
+		color: #007AFF;
+		font-size: 20px;
+		margin-top: 36px;
+	}
+
+	.left_block__search {
+		position: relative;
+		margin-top: 18px;
+	}
+
+	.left_block__input {
+		background: rgba(120, 120, 128, 0.12);
+		width: 100%;
+		height: 36px;
+		border-radius: 10px;
+		padding: 0 42px 0 36px; 
+		font-family: SF Pro Medium;
+		border: none; 
+		position: absolute;
+		box-sizing: border-box;
+	}
+	.left_block__icon {
+		position: absolute;
+		background-image: url(../icons/search.svg);
+		height: 24px;
+		margin-top: 8px;
+		margin-left: 6px;
+		width: 24px;
+		background-repeat: no-repeat;
+	}
+	.left_block__input::placeholder {
+		font-family: SF Pro Medium;
+		color: rgba(60, 60, 67, 0.6);
+	}
+	.left_block__text-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+	}
+	.left_block__text {
+		font-family: SF Pro Semibold;
+		font-size: 14px;
+		color: rgb(0, 122, 255);
+		margin: auto;
+    	text-align: center;
+		top: 50%;
+	}
+	.left_block__button {
+		border-radius: 10px;
+		width: 90%;
+		height: 40px;
+		font-family: SF Pro Semibold;
+		font-size: 14px;
+		background-color: rgb(0, 122, 255);
+		font-family: SF Pro Semibold;
+		color: white;
+		position: absolute;
+		bottom: 0;
+		margin-bottom: 47px;
+	}
+
+	.right_block {
+		margin: 31px 24px 47px 24px;
+		border-radius: 20px;
+		background-color: white;
+		float: right;
+		right: 0;
+		width: 60%;
+	}
+}
