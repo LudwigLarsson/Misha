@@ -24,7 +24,7 @@ body {
 		font-family: SF Pro Semibold;
 		color: #007AFF;
 		font-size: 20px;
-		margin-top: 36px;
+		margin-top: 31px;
 	}
 
 	.left_block__search {
@@ -81,11 +81,11 @@ body {
 		color: white;
 		position: absolute;
 		bottom: 0;
-		margin-bottom: 47px;
+		margin-bottom: 36px;
 	}
 
 	.right_block {
-		margin: 31px 24px 47px 24px;
+		margin: 31px 24px 36px 24px;
 		border-radius: 20px;
 		background-color: white;
 		float: right;
